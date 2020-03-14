@@ -1,5 +1,8 @@
-GameMenuFrameHeader:SetPoint("TOP",0,-3)
-GameMenuFrameHeader:Hide()
+local Header = GameMenuFrame.Header
+Header:SetPoint("TOP",0,-3)
+Header.LeftBG:Hide()
+Header.CenterBG:Hide()
+Header.RightBG:Hide()
 local type = type
 GameMenuFrame.Border.Bg:SetVertexColor(0,0,0,0.4)
 for k,v in pairs(GameMenuFrame.Border) do
