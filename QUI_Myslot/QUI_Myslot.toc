@@ -1,0 +1,6 @@
+## Interface: 80300
+## Author: cqwrteur
+## Title: QUI Myslot
+## Dependencies: QUI, Myslot
+
+myslot.lua

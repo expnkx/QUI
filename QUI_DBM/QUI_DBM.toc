@@ -1,0 +1,9 @@
+## Interface: 80300
+## Author: cqwrteur
+## Title: QUI DBM
+
+## Dependencies: QUI, DBM-GUI
+## LoadOnDemand: 1
+## X-QUI-LOD: DBM-GUI
+
+dbm.lua

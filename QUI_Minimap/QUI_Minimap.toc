@@ -1,0 +1,7 @@
+## Interface: 80300
+## Author: cqwrteur
+## Title: QUI Minimap
+
+## Dependencies: QUI
+
+minimap.lua

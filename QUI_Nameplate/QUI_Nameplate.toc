@@ -1,0 +1,9 @@
+## Interface: 80300
+## Author: cqwrteur
+## Title: QUI Nameplate
+
+## Dependencies: QUI
+## LoadOnDemand: 1
+## X-QUI-CONFLICT: Blizzard_NamePlates
+
+nameplate.lua

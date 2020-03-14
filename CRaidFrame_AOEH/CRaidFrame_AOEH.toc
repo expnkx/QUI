@@ -1,0 +1,7 @@
+## Interface: 80300
+## Author: cqwrteur
+## Title: CRaidFrame AOEH
+## Dependencies: CRaidFrame
+## LoadOnDemand: 1
+
+Core.lua

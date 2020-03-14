@@ -1,0 +1,7 @@
+## Interface: 80300
+## Author: cqwrteur
+## Title: QUI Scrolling Battle Text
+
+## Dependencies: QUI
+
+sbt.lua

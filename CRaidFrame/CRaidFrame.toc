@@ -1,0 +1,12 @@
+## Interface: 80300
+## Author: cqwrteur
+## Title: CRaidFrame
+## SavedVariables: CRaidFrameDB
+## OptionalDeps: Ace3, LibDualSpec-1.0, LibSharedMedia-3.0
+
+#@no-lib-strip@
+Libs\LibSharedMedia-3.0\LibSharedMedia-3.0.lua
+#@end-no-lib-strip@
+
+Init.lua
+Core.lua

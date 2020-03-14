@@ -1,0 +1,11 @@
+## Interface: 80300
+## Author: cqwrteur
+## Title: MusicBox Options
+## Dependencies: MusicBox
+## LoadOnDemand: 1
+
+
+Init.lua
+locale\locale.xml
+module\module.xml
+Core.lua

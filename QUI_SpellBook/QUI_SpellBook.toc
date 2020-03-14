@@ -1,0 +1,7 @@
+## Interface: 80300
+## Author: cqwrteur
+## Title: QUI Spell Book
+
+## Dependencies: QUI
+
+spellbook.lua

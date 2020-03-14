@@ -1,0 +1,21 @@
+local L = LibStub("AceLocale-3.0"):NewLocale("CRaidFrame", "esMX")
+if not L then return end
+--[[Translation missing --]]
+--[[ L["Anchor"] = ""--]] 
+--[[Translation missing --]]
+--[[ L["Border"] = ""--]] 
+--[[Translation missing --]]
+--[[ L["Border Size"] = ""--]] 
+--[[Translation missing --]]
+--[[ L["Bottom"] = ""--]] 
+--[[Translation missing --]]
+--[[ L["Font"] = ""--]] 
+--[[Translation missing --]]
+--[[ L["Left"] = ""--]] 
+--[[Translation missing --]]
+--[[ L["Resource Bar"] = ""--]] 
+--[[Translation missing --]]
+--[[ L["Resource Bar Length"] = ""--]] 
+--[[Translation missing --]]
+--[[ L["Timer"] = ""--]] 
+

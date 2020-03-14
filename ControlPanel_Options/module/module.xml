@@ -1,0 +1,13 @@
+<Ui xmlns="http://www.blizzard.com/wow/ui/" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://www.blizzard.com/wow/ui/
+..\FrameXML\UI.xsd">
+	<Script file="Global.lua"/>
+	<Script file="Interface.lua"/>
+	<Script file="graphics_quality.lua"/>
+	<Script file="Graphics.lua"/>
+	<Script file="Network.lua"/>
+	<Script file="Sound.lua"/>
+	<Script file="Voice.lua"/>
+	<Script file="Script.lua"/>
+	<Script file="Remove.lua"/>
+	<Script file="Instance.lua"/>
+</Ui>

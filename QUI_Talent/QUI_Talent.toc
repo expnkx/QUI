@@ -1,0 +1,9 @@
+## Interface: 80300
+## Author: cqwrteur
+## Title: QUI Talent
+
+## Dependencies: QUI
+## LoadOnDemand: 1
+## X-QUI-LOD: Blizzard_TalentUI
+
+talent.lua

@@ -1,0 +1,7 @@
+## Interface: 80300
+## Author: cqwrteur
+## Title: QUI Gossip
+
+## Dependencies: QUI
+
+gossip.lua

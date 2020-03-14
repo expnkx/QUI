@@ -1,0 +1,10 @@
+﻿## Interface: 80300
+## Author: cqwrteur
+## Title: ControlPanel Options
+## Dependencies: ControlPanel
+## LoadOnDemand: 1
+
+locale\locale.xml
+Init.lua
+module\module.xml
+Core.lua

@@ -1,0 +1,12 @@
+## Interface: 80300
+## Author: cqwrteur
+## Title: CRaidFrame Options
+## Dependencies: CRaidFrame
+## LoadOnDemand: 1
+## X-CRF-MESSAGE: CRF_ChatCommand
+
+#@no-lib-strip@
+Libs\AceGUI-3.0-SharedMediaWidgets\widget.xml
+#@end-no-lib-strip@
+locale\locale.xml
+Core.lua

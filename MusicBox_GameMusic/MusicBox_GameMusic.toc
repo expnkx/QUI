@@ -1,0 +1,7 @@
+## Interface: 80300
+## Author: cqwrteur
+## Title: MusicBox GameMusic
+## Dependencies: MusicBox
+## LoadOnDemand: 1
+
+listfile.lua
