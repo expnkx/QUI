@@ -67,20 +67,30 @@ local function cogameinfo()
 		return ""
 	end
 	while true do
-		font:SetFormattedText("%s|c0000ff00%s|r %.1f",xpstr(),date("%Y/%m/%d %H:%M:%S",time()),GetFramerate())
+		local netdown, netup, netlagHome, netlagWorld = GetNetStats()
+		local fmt_str="%s|c0000ff00%s|r H:%d W:%d %g"
+		if netlagHome>=300 or netlagWorld>=300 then
+			fmt_str="%s|c0000ff00%s|r |c00ff0000H:%d W:%d|r %g"
+		end
+		font:SetFormattedText(fmt_str,xpstr(),date("%Y/%m/%d %H:%M:%S",time()),netlagHome,netlagWorld,GetFramerate())
 		if event == "OnEnter" then
 			GameTooltip:SetOwner(gameinfo)
 			gameinfo:SetScript("OnEnter",nop)
 			gameinfo:SetScript("OnLeave",onleave)
 			while true do
-				font:SetFormattedText("%s|c0000ff00%s|r %.1f",xpstr(),date("%Y/%m/%d %H:%M:%S",time()),GetFramerate())
+				local netdown, netup, netlagHome, netlagWorld = GetNetStats()
+				local fmt_str="%s|c0000ff00%s|r H:%d W:%d %g"
+				if netlagHome>=300 or netlagWorld>=300 then
+					fmt_str="%s|c0000ff00%s|r |c00ff0000H:%d W:%d|r %g"
+				end
+				font:SetFormattedText(fmt_str,xpstr(),date("%Y/%m/%d %H:%M:%S",time()),netlagHome,netlagWorld,GetFramerate())
 				UpdateAddOnMemoryUsage()
 				UpdateAddOnCPUUsage()
 				GameTooltip:ClearLines()
 				local netdown, netup, netlagHome, netlagWorld = GetNetStats()
 				local string_format = string.format
-				GameTooltip:AddLine(string_format("%.4f/%.4f/%.4f",GetAverageItemLevel()),0.5, 0.5, 0.8,true)
-				GameTooltip:AddDoubleLine(string_format("%.3f↓",netdown),string_format("%.3f↑",netup),0.5,0.5,0.8,  0.5, 0.5, 0.8,true)
+				GameTooltip:AddLine(string_format("%g/%g/%g",GetAverageItemLevel()),0.5, 0.5, 0.8,true)
+				GameTooltip:AddDoubleLine(string_format("%g↓",netdown),string_format("%g↑",netup),0.5,0.5,0.8,  0.5, 0.5, 0.8,true)
 				local homeip,worldip = GetNetIpTypes()
 				GameTooltip:AddDoubleLine(HOME..(homeip==1 and ":IPv4" or ":IPv6"),netlagHome,0.5,0.5,0.8,0.5,0.5,0.8,true)
 				GameTooltip:AddDoubleLine(WORLD..(worldip==1 and ":IPv4" or ":IPv6"),netlagWorld,0.5,0.5,0.8, 0.5, 0.5, 0.8,true)	
