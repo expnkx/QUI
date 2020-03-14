@@ -76,7 +76,7 @@ function Ace3.RegisterAsWidget(acegui,widget)
 	elseif tpe == "EditBox" then
 		wdg.editbox.Left:Hide()
 		wdg.editbox.Right:Hide()
-		wdg.editbox.Middle:SetTexCoord(0.0625,0.9375,0.1,0.525)
+		wdg.editbox.Middle:SetTexCoord(0.0625,0.9375,0.15,0.525)
 	elseif tpe  == "MultiLineEditBox" then
 		wdg.scrollBG:SetBackdropBorderColor(0,0,0,0)
 		local button = wdg.button

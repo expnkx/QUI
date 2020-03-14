@@ -31,7 +31,7 @@ end)
 local function skineditbox(w)
 	w.Left:Hide()
 	w.Right:Hide()
-	w.Middle:SetTexCoord(0.0625,0.9375,0.1,0.525)
+	w.Middle:SetTexCoord(0.0625,0.9375,0.15,0.525)
 end
 
 skineditbox(LFGListFrame.EntryCreation.Name)
