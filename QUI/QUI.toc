@@ -1,7 +1,7 @@
 ## Interface: 80300
 ## Author: cqwrteur
 ## Title: QUI
-## Version: 339
+## Version: 342
 ## SavedVariables: QUIDB
 ## OptionalDeps: Ace3
 
