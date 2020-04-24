@@ -43,7 +43,15 @@ skin_checkbox(ConquestFrame.DPSIcon.checkButton)
 
 local ConquestTooltip = ConquestTooltip
 
-if not ConquestTooltip:IsForbidden() then
-	ConquestTooltip:SetBackdropColor(0,0,0,1)
-	ConquestTooltip:SetBackdropBorderColor(0,0,0,0)
-end
+ConquestTooltip:SetBackdropColor(0,0,0,1)
+ConquestTooltip:SetBackdropBorderColor(0,0,0,0)
+
+local HonorInset = PVPQueueFrame.HonorInset
+
+PVPQueueFrame.HonorInset.NineSlice:SetAlpha(0)
+
+local regions = {HonorInset:GetRegions()}
+regions[1]:SetTexture([[Interface\DialogFrame\UI-DialogBox-Background]])
+
+regions[1]:Show()
+regions[2]:SetAlpha(0)
