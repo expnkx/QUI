@@ -24,13 +24,12 @@ button:GetPushedTexture():SetTexCoord(0.25,0.75,0.28,0.75)
 button:GetHighlightTexture():SetTexCoord(0.25,0.75,0.28,0.75)
 
 local function skin_checkbox(box)
-   box:GetNormalTexture():SetTexCoord(0.3, 0.7, 0.3, 0.7)
-   box:GetPushedTexture():SetTexCoord(0.3, 0.7, 0.3, 0.7)
-   box:GetHighlightTexture():SetTexCoord(0.3, 0.7, 0.3, 0.7)
-   box:GetCheckedTexture():SetTexCoord(0.2, 0.9, 0.1 ,0.9)
-   box:SetScale(0.7)
+	box:GetNormalTexture():SetTexCoord(0.3, 0.7, 0.3, 0.7)
+	box:GetPushedTexture():SetTexCoord(0.3, 0.7, 0.3, 0.7)
+	box:GetHighlightTexture():SetTexCoord(0.3, 0.7, 0.3, 0.7)
+	box:GetCheckedTexture():SetTexCoord(0.2, 0.9, 0.1 ,0.9)
+	box:SetScale(0.7)
 end
-
 
 HonorFrame.TankIcon:SetPoint("BOTTOMLEFT",HonorFrame.Inset,"TOPLEFT",9,7)
 skin_checkbox(HonorFrame.TankIcon.checkButton)
@@ -41,3 +40,10 @@ ConquestFrame.TankIcon:SetPoint("BOTTOMLEFT",ConquestFrame.Inset,"TOPLEFT",9,7)
 skin_checkbox(ConquestFrame.TankIcon.checkButton)
 skin_checkbox(ConquestFrame.HealerIcon.checkButton)
 skin_checkbox(ConquestFrame.DPSIcon.checkButton)
+
+local ConquestTooltip = ConquestTooltip
+
+if not ConquestTooltip:IsForbidden() then
+	ConquestTooltip:SetBackdropColor(0,0,0,1)
+	ConquestTooltip:SetBackdropBorderColor(0,0,0,0)
+end
