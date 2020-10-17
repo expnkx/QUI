@@ -23,10 +23,7 @@ Minimap:SetScript("OnMouseWheel",function(self,val,...)
 	Minimap:SetZoom(zoom)
 end)
 
-GarrisonLandingPageMinimapButton:ClearAllPoints()
-GarrisonLandingPageMinimapButton:SetPoint("BOTTOMLEFT",Minimap,"BOTTOMLEFT",-20,-46)
-GarrisonLandingPageMinimapButton:SetScale(0.7)
-
+GarrisonLandingPageMinimapButton:SetAlpha(0)
 function GetMinimapShape() return 'SQUARE' end
 
 function minimap:OnEnable()
