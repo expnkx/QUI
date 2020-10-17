@@ -26,8 +26,13 @@ function CRaidFrame:OnInitialize()
 			[1] = nulltb,
 			[2] = nulltb
 		}
-	})	
-	LibStub('LibDualSpec-1.0'):EnhanceDatabase(self.db, "CRaidFrame")
+	})
+	local LibDualSpec = LibStub('LibDualSpec-1.0',true)
+	if LibDualSpec == nil then
+		LoadAddOn('LibDualSpec-1.0')
+		LibDualSpec = LibStub('LibDualSpec-1.0')
+	end
+	LibDualSpec:EnhanceDatabase(self.db, "CRaidFrame")
 	self:RegisterChatCommand("CRaidFrame", "ChatCommand")
 	self:RegisterChatCommand("CRF", "ChatCommand")
 --	self:RegisterEvent("GROUP_ROSTER_UPDATE")

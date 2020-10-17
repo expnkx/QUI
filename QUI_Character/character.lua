@@ -104,7 +104,7 @@ end
 skin_checkbox(ReputationDetailAtWarCheckBox)
 skin_checkbox(ReputationDetailInactiveCheckBox)
 skin_checkbox(ReputationDetailMainScreenCheckBox)
-skin_checkbox(ReputationDetailLFGBonusReputationCheckBox)
+--skin_checkbox(ReputationDetailLFGBonusReputationCheckBox)
 skin_checkbox(TokenFramePopupInactiveCheckBox)
 skin_checkbox(TokenFramePopupBackpackCheckBox)
 

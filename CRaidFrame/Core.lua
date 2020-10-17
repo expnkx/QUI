@@ -157,8 +157,7 @@ local CLASS_COLORS = CUSTOM_CLASS_COLORS or RAID_CLASS_COLORS
 local table_concat = table.concat
 local wipe = wipe
 local UnitIsUnit = UnitIsUnit
-local UnitInPhase = UnitInPhase
-local UnitIsWarModePhased = UnitIsWarModePhased
+local UnitPhaseReason = UnitPhaseReason
 local math_floor = math.floor
 local text_ctb = {}
 local self_buff
@@ -217,9 +216,9 @@ local function update(self,tag)
 		end
 	end
 	if tag == 4 or tag < 2 then
-		local isInSamePhase = UnitInPhase(unit) and not UnitIsWarModePhased(unit)
+		local in_different_phase = UnitPhaseReason(unit)
 		local alpha
-		if not isInSamePhase or not UnitIsFriend("player",unit) then
+		if in_different_phase or not UnitIsFriend("player",unit) then
 			alpha = 0.1
 		-- y = -0.015x + 1.05
 		elseif CheckInteractDistance(unit,3) then --10 yards -- most ranged aoe healing spells
@@ -290,7 +289,7 @@ local function update(self,tag)
 					text_ctb[#text_ctb+1]=":0|t"
 				end
 			end
-			if not isInSamePhase then
+			if in_different_phase then
 				if role then
 					text_ctb[#text_ctb+1] = ' '
 					role = true
@@ -559,7 +558,7 @@ local function configure(tb,h)
 	frame[6]=create_multiple_cooldown(statusbar,profile.buffs,not profile.tooltip)
 	frame[7]=create_multiple_cooldown(statusbar,profile.debuffs,not profile.tooltip)
 	frame[8]=create_cooldown(statusbar)
-	local border_frame = CreateFrame("Frame",nil,virtualframe)
+	local border_frame = CreateFrame("Frame",nil,virtualframe, "BackdropTemplate")
 	border_frame:SetAllPoints(frame)
 	border_frame:SetFrameLevel(frame:GetFrameLevel())
 	frame[9]=border_frame
@@ -680,11 +679,7 @@ function CRaidFrame.Update()
 		CRaidFrame:RegisterEvent("UNIT_PHASE",unit_event,0)
 		CRaidFrame:RegisterEvent("UNIT_CONNECTION",unit_event,0)
 		CRaidFrame:RegisterEvent("UNIT_FLAGS",unit_event,0)
-		if not profile.disable_unit_health_frequent then
-			CRaidFrame:RegisterEvent("UNIT_HEALTH_FREQUENT", unit_event,1)
-		else
-			CRaidFrame:RegisterEvent("UNIT_HEALTH", unit_event,1)
-		end
+		CRaidFrame:RegisterEvent("UNIT_HEALTH", unit_event,1)
 		CRaidFrame:RegisterEvent("UNIT_MAXHEALTH", unit_event,1)
 		CRaidFrame:RegisterEvent("UNIT_ABSORB_AMOUNT_CHANGED",unit_event,1)
 		CRaidFrame:RegisterEvent("UNIT_HEAL_ABSORB_AMOUNT_CHANGED",unit_event,1)

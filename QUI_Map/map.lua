@@ -24,7 +24,7 @@ end
 
 QuestMapFrame.VerticalSeparator:Hide()
 
-QuestScrollFrame.Background:SetAlpha(0)
+--QuestScrollFrame.Background:SetAlpha(0)
 
 QuestScrollFrame.Contents.Separator:Hide()
 
@@ -37,9 +37,9 @@ for i=1,#regions do
 	end
 end
 
-QuestScrollFrameScrollBar:SetAlpha(0)
+QuestScrollFrame.ScrollBar:SetAlpha(0)
 QuestScrollFrame.Contents.Separator:SetAlpha(0)
-QuestScrollFrame.Contents.WarCampaignHeader.Background:SetAlpha(0)
+--QuestScrollFrame.Contents.WarCampaignHeader.Background:SetAlpha(0)
 QuestScrollFrame.Contents.StoryHeader.Background:SetAlpha(0)
 
 local function skinbutton(button)

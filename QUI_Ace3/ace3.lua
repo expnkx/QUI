@@ -142,9 +142,9 @@ function Ace3:ADDON_LOADED()
 			popup:SetBackdropBorderColor(0,0,0,0)
 		else
 			popup:GetChildren():Hide()
-			popup:SetBackdrop({bgFile = [[Interface\DialogFrame\UI-DialogBox-Background-Dark]]})
+--			popup:SetBackdrop({bgFile = [[Interface\DialogFrame\UI-DialogBox-Background-Dark]]})
 		end
-		popup:SetBackdropColor(0,0,0,0.6)
+--		popup:SetBackdropColor(0,0,0,0.6)
 		popup:ClearAllPoints()
 		popup:SetPoint("TOP", UIParent, "TOP", 0, -120)
 		popup.accept:SetNormalTexture([[Interface\DialogFrame\UI-DialogBox-Background-Dark]])

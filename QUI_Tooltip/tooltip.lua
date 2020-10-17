@@ -1,9 +1,10 @@
 local QUI = LibStub("AceAddon-3.0"):GetAddon("QUI")
 
-function QUI:GameTooltip_SetBackdropStyle(obj)
+function QUI:GameTooltip_SetBackdropStyle(obj,...)
+	print(obj,...)
 	if not obj:IsForbidden() then
-		obj:SetBackdropColor(0,0,0,1)
-		obj:SetBackdropBorderColor(0,0,0,0)
+--		obj:SetBackdropColor(0,0,0,1)
+--		obj:SetBackdropBorderColor(0,0,0,0)
 	end
 end
 
@@ -89,4 +90,4 @@ VoiceMacroMenu
 for i = 1, #ChatMenus do
 	QUI:SecureHookScript(ChatMenus[i],"OnShow", "GameTooltip_SetBackdropStyle")
 end
-QUI:SecureHook("GameTooltip_SetBackdropStyle")
+--QUI:SecureHook("GameTooltip_SetBackdropStyle")
