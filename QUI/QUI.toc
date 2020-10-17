@@ -1,7 +1,7 @@
-## Interface: 90000
+## Interface: 90001
 ## Author: cqwrteur
 ## Title: QUI
-## Version: 347
+## Version: 349
 ## SavedVariables: QUIDB
 ## OptionalDeps: Ace3
 
