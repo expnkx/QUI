@@ -51,8 +51,11 @@ on_leave()
 
 for i=1,13 do
 	skinbag("ContainerFrame"..i)
-	for j=1,20 do
+	for j=1,100 do
 		local button =  _G["ContainerFrame"..i.."Item"..j]
+		if button == nil then
+			break
+		end
 		button:SetNormalTexture("")
 		button.icon:SetTexCoord(0.1,0.9,0.1,0.9)
 		button.IconBorder:SetAlpha(0)

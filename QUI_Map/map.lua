@@ -24,7 +24,7 @@ end
 
 QuestMapFrame.VerticalSeparator:Hide()
 
---QuestScrollFrame.Background:SetAlpha(0)
+QuestMapFrame.Background:SetAlpha(0)
 
 QuestScrollFrame.Contents.Separator:Hide()
 

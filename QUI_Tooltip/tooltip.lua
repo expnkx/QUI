@@ -1,9 +1,9 @@
 local QUI = LibStub("AceAddon-3.0"):GetAddon("QUI")
 
-function QUI:GameTooltip_SetBackdropStyle(obj,...)
+function QUI:SharedTooltip_SetBackdropStyle(obj,...)
 	if not obj:IsForbidden() then
---		obj:SetBackdropColor(0,0,0,1)
---		obj:SetBackdropBorderColor(0,0,0,0)
+		obj:SetBackdropColor(0,0,0,1)
+		obj:SetBackdropBorderColor(0,0,0,0)
 	end
 end
 
@@ -16,7 +16,7 @@ end
 
 for k,v in pairs(QuestScrollFrame) do
 	if type(k) == "string" and k:find("Tooltip") and type(v)=="table" then
-		QUI:GameTooltip_SetBackdropStyle(v)
+		QUI:SharedTooltip_SetBackdropStyle(v)
 	end
 end
 
@@ -70,12 +70,12 @@ EmbeddedItemTooltip
 }
 
 for i=1,#tooltips_frames do
-	QUI:GameTooltip_SetBackdropStyle(tooltips_frames[i])
+	QUI:SharedTooltip_SetBackdropStyle(tooltips_frames[i])
 end
 
 
 QUI:SecureHook("UIDropDownMenu_CreateFrames",function(level, index)
-	QUI:GameTooltip_SetBackdropStyle(_G["DropDownList"..level.."MenuBackdrop"])
+	QUI:SharedTooltip_SetBackdropStyle(_G["DropDownList"..level.."MenuBackdrop"])
 end)
 
 local ChatMenus =
@@ -87,6 +87,6 @@ VoiceMacroMenu
 }
 
 for i = 1, #ChatMenus do
-	QUI:SecureHookScript(ChatMenus[i],"OnShow", "GameTooltip_SetBackdropStyle")
+	QUI:SecureHookScript(ChatMenus[i],"OnShow", "SharedTooltip_SetBackdropStyle")
 end
---QUI:SecureHook("GameTooltip_SetBackdropStyle")
+QUI:SecureHook("SharedTooltip_SetBackdropStyle")
