@@ -1,7 +1,6 @@
 local QUI = LibStub("AceAddon-3.0"):GetAddon("QUI")
 
 function QUI:GameTooltip_SetBackdropStyle(obj,...)
-	print(obj,...)
 	if not obj:IsForbidden() then
 --		obj:SetBackdropColor(0,0,0,1)
 --		obj:SetBackdropBorderColor(0,0,0,0)
