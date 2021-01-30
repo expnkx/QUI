@@ -1,7 +1,7 @@
 ## Interface: 90002
 ## Author: cqwrteur
 ## Title: QUI
-## Version: 357
+## Version: 360
 ## SavedVariables: QUIDB
 ## OptionalDeps: Ace3
 

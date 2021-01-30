@@ -56,7 +56,7 @@ local function cogameinfo()
 			local azeriteitem = C_AzeriteItem.FindActiveAzeriteItem()
 			if azeriteitem then
 				local c,m = C_AzeriteItem.GetAzeriteItemXPInfo(azeriteitem)
-				return ("%d/%d/%d(%.1f%%) "):format(C_AzeriteItem.GetPowerLevel(azeriteitem),c,m,100*c/m)
+				return ("%d%d/%d(%.1f%%) "):format(C_AzeriteItem.GetPowerLevel(azeriteitem),c,m,100*c/m)
 			else
 				return ""
 			end
@@ -72,7 +72,7 @@ local function cogameinfo()
 		if netlagHome>=300 or netlagWorld>=300 then
 			fmt_str="%s|c0000ff00%s|r |c00ff0000H:%d W:%d|r %g"
 		end
-		font:SetFormattedText(fmt_str,xpstr(),date("%Y/%m/%d %H:%M:%S",time()),netlagHome,netlagWorld,GetFramerate())
+		font:SetFormattedText(fmt_str,xpstr(),date("%F %T",time()),netlagHome,netlagWorld,GetFramerate())
 		if event == "OnEnter" then
 			GameTooltip:SetOwner(gameinfo)
 			gameinfo:SetScript("OnEnter",nop)
@@ -83,7 +83,7 @@ local function cogameinfo()
 				if netlagHome>=300 or netlagWorld>=300 then
 					fmt_str="%s|c0000ff00%s|r |c00ff0000H:%d W:%d|r %g"
 				end
-				font:SetFormattedText(fmt_str,xpstr(),date("%Y/%m/%d %H:%M:%S",time()),netlagHome,netlagWorld,GetFramerate())
+				font:SetFormattedText(fmt_str,xpstr(),date("%F %T",time()),netlagHome,netlagWorld,GetFramerate())
 				UpdateAddOnMemoryUsage()
 				UpdateAddOnCPUUsage()
 				GameTooltip:ClearLines()
