@@ -79,10 +79,11 @@ selljunkbutton:SetPoint("RIGHT",BagItemSearchBox,"LEFT",-4,-5)
 selljunkbutton:SetScript("OnClick",function()
 	if GetMerchantItemInfo(1) then
 		local GetContainerItemInfo = GetContainerItemInfo
+		local le_item_quality_poor = Enum.ItemQuality.Poor
 		for i=0,NUM_BAG_SLOTS do
 			for j=1,GetContainerNumSlots(i) do
 				local texture, itemCount, locked, quality, readable, lootable, itemLink , isFiltered, noValue, itemID = GetContainerItemInfo(i,j)
-				if quality == LE_ITEM_QUALITY_POOR and not noValue then
+				if quality == le_item_quality_poor and not noValue then
 					UseContainerItem(i,j)
 				end
 			end
